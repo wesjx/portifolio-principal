@@ -1,0 +1,32 @@
+.footer{
+    height: 40vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer > p {
+    margin: 2rem 0 0 3rem;
+}
+
+.media-social{
+    display: flex;
+    border-bottom: black 2px solid;
+    margin: 0 3rem 0;
+    width: 93%;
+}
+
+.img-media-social{
+    width: 3rem;
+}
+
+.media-social > li{
+   margin: 0 2rem 1rem 0;
+}
+
+@media screen and (max-width: 720px) {
+    .media-social{
+        width: 73%;
+    }
+}

@@ -1,0 +1,9 @@
+.projects-container{
+    height: 100vh;
+    padding: 5em 2em;
+}
+
+.projects-item{
+    list-style: disc;
+    margin: 0.7em 0
+}
