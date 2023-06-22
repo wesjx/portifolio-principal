@@ -1,0 +1,97 @@
+.introdution{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.logo-header {
+    width: 37vw;
+    padding: 3rem 0;
+}
+
+.title-1 {
+    font-weight: 400;
+    font-size: 4rem;
+
+    margin: 1.6em 0 0 0;
+}
+
+.subtitle-1 {
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    margin: 1em 0 0 0;
+}
+
+.introdution-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    margin: 3em 0 0 3em;
+}
+
+.highlights{
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0 3em 0;
+    width: 80%;
+}
+
+.highlights > div{
+    width: 40%;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) { 
+    .title-1 {
+        font-size: 3rem;
+    
+    }
+
+}
+
+@media screen and (max-width: 720px) { 
+    .introdution{
+        align-items: center;
+        flex-direction: column-reverse;
+        padding:0 0 0;
+    }
+
+    .introdution-text{
+    flex-direction: column;
+    margin: 1em;
+    align-items: center;
+    }
+
+
+    .logo-header{
+        position: relative;
+        top: 7em;
+    }
+
+    .subtitle-1{
+        margin: 2rem 1rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .title-1{
+        padding-top: 1em;
+    }
+
+    .highlights > div{
+        margin: 0 1em 0 1.3em
+    }
+    .highlights{
+        margin: 2rem 0 8em 0;
+        width: 97%;
+    }
+    
+    .highlights > div > p{
+    font-size: 0.8em;
+    }
+}

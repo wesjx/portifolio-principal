@@ -1,0 +1,28 @@
+    .works{
+        background: var(--color1);
+        display: flex;
+        justify-content: space-evenly;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+    
+    .works-item{
+        width: 40%;
+    }
+
+    .works-item > p {
+        margin: 2rem 0;
+    }
+    
+    @media screen and (max-width: 720px) {
+        .works{
+        flex-direction: column;
+    }
+    
+        .works-item{
+            padding: 1em;
+            width: 70%;
+        }
+    }

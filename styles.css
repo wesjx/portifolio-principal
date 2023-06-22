@@ -1,0 +1,69 @@
+@import url(./styles/header.css);
+@import url(./styles/introdution.css);
+@import url(./styles/about.css);
+@import url(./styles/works.css);
+@import url(./styles/contact.css);
+@import url(./styles/footer.css);
+@import url(./styles/projects.css);
+
+:root{
+    --color1: #fff;
+    --color2: #DFDFDF;
+    
+    --font-principal: 'Montserrat', sans-serif;
+
+}
+
+body {
+    font-family: var(--font-principal) ;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.default-button{
+    font-size: 15px;
+    align-self: flex-start;
+    padding: 0.6em;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.default-button:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+  
+.default-button:hover:before {
+    opacity: 0.2;
+}
+  
+.default-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    font-weight: 400;
+    font-size: 3.7em;
+}
+
+.text{
+    font-weight: 500;
+    font-size: 1em;
+}
