@@ -1,91 +1,116 @@
-.title-contact{
-    font-weight: 400;
-    font-size: 4rem;
+.title-contact {
+  font-weight: 400;
+  font-size: 4rem;
 
-    margin: 1em;
-} 
-
-.contact-container > p{
-    padding: 1rem 2.5rem;
+  margin: 1em;
 }
- 
+
+.contact-container > p {
+  padding: 1rem 2.5rem;
+  font-size: 1.5em;
+}
+
 .contact-container {
-    background: var(--color2);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    scroll-snap-align: start;
+  background: var(--color2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  scroll-snap-align: start;
+  color: var(--font-color);
+}
+
+.contact-form {
+  width: 39em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.input,
+textarea {
+  margin: 1em 0 1em 0;
+  position: relative;
+}
+
+.input input,
+textarea {
+  font-size: 100%;
+  padding: 1em;
+  outline: none;
+  border: none;
+  border-bottom: var(--font-color) 2px solid;
+  background: transparent;
+  width: 94%;
+  resize: none;
+}
+
+.input label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.7em;
+  margin-left: 0.1em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+
+.input :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  padding: 0.4em;
+  background: transparent;
+}
+
+.social-media {
+  width: 50vw;
+}
+
+.social-media_list {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 1em;
+}
+
+.social-media_item {
+  width: 3em;
+}
+
+.social-media_item > a > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .contact-container {
+    padding: 4em 0;
+    height: auto;
   }
-  
+
+  .title-contact {
+    font-size: 3.5em;
+    text-align: center;
+    margin: 0;
+  }
+
+  .input input,
+  textarea {
+    width: 85%;
+  }
+
   .contact-form {
-    width: 39em;
+    width: 21em;
   }
-
-  .contact {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input, textarea {
-    margin: 1em 0 1em 0;
-    position: relative;
-  }
-  
-  .input input, textarea {
-      font-size: 100%;
-    padding: 1em;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid;
-    background: transparent;
-    border-radius: none;
-    width: 94%;
-    resize: none;
-  }
-  
-  .input label {
-    font-size: 100%;
-    position: absolute;
-    left: 0;
-    padding: 0.7em;
-    margin-left: 0.1em;
-    pointer-events: none;
-    transition: all 0.5s ease;
-    text-transform: uppercase;
-  }
-  
-  .input :is(input:focus, input:valid)~label {
-    transform: translateY(-50%) scale(.9);
-    margin: 0em;
-    padding: 0.4em;
-    background: transparent;
-  }
-  
-  .input textarea:focus ~ label,
-  .input textarea:valid ~ label {
-    transform: translateY(-50%) scale(.9);
-    margin: 0em;
-    padding: 0.4em;
-    background: transparent;
-  }
-  
-  
-  
-  @media screen and (max-width: 720px) {
-    .title-contact{
-        font-size: 3.5em;
-        text-align: center;
-        margin: 0 ;
-    }
-
-    .input input, textarea {
-        width: 85%;
-    }
-
-    .contact-form{
-        width: 21em;
-    }
-  }
-  
+}

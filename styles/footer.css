@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--color1);
+    color: var(--font-color);
 }
 
 .footer > p {
@@ -12,7 +14,7 @@
 
 .media-social{
     display: flex;
-    border-bottom: black 2px solid;
+    border-bottom: var(--font-color) 2px solid;
     margin: 0 3rem 0;
     width: 93%;
 }

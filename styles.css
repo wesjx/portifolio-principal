@@ -1,17 +1,40 @@
 @import url(./styles/header.css);
 @import url(./styles/introdution.css);
-@import url(./styles/about.css);
 @import url(./styles/works.css);
+@import url(./styles/qualities.css);
 @import url(./styles/contact.css);
 @import url(./styles/footer.css);
 @import url(./styles/projects.css);
+@import url(./styles/strengths.css);
+@import url(./styles/dark-mode-btn.css);
 
 :root{
     --color1: #fff;
     --color2: #DFDFDF;
+
+    --font-color: #000;
     
     --font-principal: 'Montserrat', sans-serif;
 
+}
+
+.dark-mode{
+    --color1: #272829;
+    --color2: #61677A;
+
+    --font-color: #fff;
+}
+
+.dark-mode #svg-img{
+    filter: invert(100%); /* Inverte as cores do SVG para modo escuro */
+}
+  
+* {
+    transition: 500ms;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
 }
 
 body {
@@ -36,6 +59,8 @@ html {
     transition: all 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
+    color: var(--font-color);
+    font-size: 1.2em;
 }
 
 .default-button:before {
@@ -60,10 +85,25 @@ html {
 
 .title{
     font-weight: 400;
-    font-size: 3.7em;
+    font-size: 3.5em;
 }
 
 .text{
     font-weight: 500;
     font-size: 1em;
+}
+
+@media screen and (max-width: 1280px) {
+    .title{
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 720px) {
+  
+    .title {
+      font-size: 3em;
+      text-align: center;
+      font-weight: 500;
+    }
 }

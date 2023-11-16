@@ -1,99 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesley Junio</title>
-    <link rel="stylesheet" href="./reset.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
-    <script defer src="app.js"></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/header-efects.js" defer></script>
+    <script src="./js/faq.js" defer></script>
+    <script src="./js/dark-mode-btn.js" defer></script>
+    <script src="./js/menu-mobile.js" defer></script>
 </head>
+
 <body>
+    <div class="dark-mode-btn">
+        <label class="toggle" for="switch">
+            <input id="switch" class="dark-mode_input" type="checkbox">
+            <div class="icon icon--moon">
+                <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                        d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                        fill-rule="evenodd"></path>
+                </svg>
+            </div>
+
+            <div class="icon icon--sun">
+                <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z">
+                    </path>
+                </svg>
+            </div>
+        </label>
+    </div>
     <header>
         <nav class="menu-navigation">
-            <img  class="small-logo" src="./assets/Camada_1.svg" alt="logo-wesley-junio">
+            <img class="small-logo" id="svg-img" src="./assets/Camada_1.svg" alt="logo-wesley-junio">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
             <ul class="list-header">
                 <li id="link_header"><a id="link-list" href="#introdution">Home</a></li>
-                <li id="link_header"><a id="link-list" href="#about">About me</a></li>
+                <li id="link_header"><a id="link-list" href="#qualities">Qualities</a></li>
                 <li id="link_header"><a id="link-list" href="#works">Works</a></li>
+                <li id="link_header"><a id="link-list" href="#strengths">Strengths</a></li>
+                <li id="link_header"><a id="link-list" href="#projects">Projects</a></li>
                 <li id="link_header"><a id="link-list" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section  class="introdution" id="introdution">
+    <section class="introdution" id="introdution">
         <div class="introdution-text">
-            <h1 class="title-1">Frontend<br>Developer </h1>
-            <p class="subtitle-1">Developing, studying and having fun <br>in the front end area.</p>
+            <p>I'm Wesley Junior</p>
+            <h1 class="title-1">Frontend<br>Developer</h1>
+            <p class="subtitle-1" id="header-subtitle"></p>
+            <p class="subtitle-1">your ideas.</p>
             <div class="highlights">
-                <div><p>Currently dedicating my time to studies and developing small projects.</p></div>
-                <div><p>Improving and working to be a professional with good semantics and clean code.</p></div>
+                <div>
+                    <p><img class="logo-introdution" id="svg-img" src="./assets/location.svg"
+                            alt="Logo Location">Currently based in
+                        Ennis, Ireland.</p>
+                </div>
+                <div>
+                    <p><img class="logo-introdution" id="svg-img" src="./assets/app-dev-interface.svg" alt="Logo web">I
+                        take pride in
+                        delivering clean and efficient code, ensuring your online presence is both sleek and fast.</p>
+                </div>
             </div>
         </div>
-            <img class="logo-header" src="./assets/big-logo.svg" alt="logo-wj">
+        <img class="logo-header" id="svg-img" id="svg-img" src="./assets/big-logo.svg" alt="logo-wj">
     </section>
 
-<section class="about" id="about">
+    <section class="qualities" id="qualities">
+        <div>
+            <h2 class="qualities-title title">Qualities</h2>
+            <h3>Some steps we follow to create the best experience.</h3>
+        </div>
 
-    <div>
-        <h2 class="about-title title">About<br>Me:</h2>
-    </div>
-    <div class="about-item text">
-        <p>I am Wesley Junio, 24y, developer student, from Brazil living in Ireland, with experiencie in IT and eletronic security.</p>
+        <div class="box">
 
-        <p><br>Talente experienced in solving with exceptional speed. Minimises resolution times through proven expertise in troubleshooting. Self-disciplined professional with ample experience in IT, customer service and technical support. Adept in troubleshooting, diagnosing and designing computer systems to customise client needs.</p>
-        <a href="./assets/CV Wesley Junio HG.pdf"><button class="default-button">My Curriculum →</button></a> 
-    </div>
+            <div class="box-item">
+                <h2 class="box-title">SEO</h2>
+                <p class="box-text">SEO, ou Otimização para Motores de Busca, é como fazemos seu site 'amigável' para os
+                    motores de busca, como o Google. Isso significa organizar e estruturar o conteúdo de maneira que os
+                    motores de busca possam entendê-lo facilmente. Quando as pessoas procuram produtos ou serviços
+                    relacionados ao seu negócio, queremos garantir que o seu site seja um dos primeiros resultados
+                    exibidos.
+                </p>
+            </div>
 
-</section>
-<section class="works" id="works">
+            <div class="box-item">
+                <h2 class="box-title">Responsive Website</h2>
+                <p class="box-text">Responsiveness is crucial for a website as it ensures an optimal viewing and
+                    interaction experience across various devices. This not only enhances user satisfaction but also
+                    expands the site's reach, catering to a diverse audience accessing it from different devices such as
+                    smartphones, tablets, and desktops.
+            </div>
 
-    <div><h2 class="works-title title">Some small <br>projects.</h2></div>
-    <div class="works-item text">
-        <p>These are some projects and techniques that I am able to do, some along with technical courses and other projects for people and companies, aiming to be better with each project.</p>
-        <a href="projects.html"><button class="default-button">Projects →</button></a> 
-    </div>
-    
-</section>
-<section class="contact-container" id="contact">
+            <div class="box-item">
+                <h2 class="box-title">Efficient design</h2>
+                <p class="box-text">
+                    An efficient design for a client is visually appealing, intuitively navigable, and responsive across
+                    various devices. Centered on the user experience, it seamlessly incorporates graphic and layout
+                    elements, highlighting the brand identity and facilitating interaction, ultimately leading to a
+                    compelling and memorable online presence.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="works" id="works">
+
+        <div>
+            <h2 class="works-title title">This is what we can do:</h2>
+        </div>
+        <div class="faq-container">
+            <details>
+                <summary>
+                    <span class="faq-title">
+                        Institutional Website
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </summary>
+                <div class="faq-content">
+                    An institutional website is your online business card. It shares key details about your company,
+                    like what you do, your values, and how to get in touch. It's a trustworthy place for people to learn
+                    about your brand and connect with you.
+                </div>
+            </details>
+            <details>
+                <summary>
+                    <span class="faq-title">
+                        Landing page
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </summary>
+                <div class="faq-content">
+                    A landing page is a targeted web page designed to quickly convey essential information and prompt a
+                    specific action from visitors, such as signing up, making a purchase, or contacting the business. It
+                    serves as a streamlined entry point to drive conversions and engagement.
+                </div>
+            </details>
+            <details>
+                <summary>
+                    <span class="faq-title">Link in the Instagram bio</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </summary>
+                <div class="faq-content">It serves as a convenient way to share multiple links through a single, easily
+                    accessible point such as contact, address, etc.
+                </div>
+            </details>
+            <details>
+                <summary>
+                    <span class="faq-title">Blog</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </summary>
+                <div class="faq-content">A blog is an online platform where you can regularly publish and share content,
+                    such as articles, insights, and updates. It serves as a dynamic space to express ideas, share
+                    information, and engage with your audience. Whether it's about personal experiences, professional
+                    insights, or specific topics of interest, a blog allows you to connect with your readers and
+                    establish a unique online presence.
+                </div>
+            </details>
+            <details>
+                <summary>
+                    <span class="faq-title">E-Commerce</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="expand-icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </summary>
+                <div class="faq-content">Uma loja online leva seus produtos a um público mundial, aumenta as vendas,
+                    melhora a visibilidade da marca, agiliza as transações, rastreia o comportamento do cliente, permite
+                    marketing personalizado, adapta-se às tendências e proporciona uma experiência de compra perfeita.
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+    <section class="strengths" id="strengths">
+        <div>
+            <h2 class="strengths-title title">Strengths</h2>
+            <h3>Let me share some of my strengths with you.</h3>
+        </div>
+
+        <div class="box">
+
+            <div class="box-item">
+                <img class="box-item_logo" id="svg-img" src="./assets/feedback-svgrepo-com.svg" alt="Feedback balon">
+                <h2 class="box-title">A robust partnership</h2>
+                <p class="box-text">Effective communication is vital in every partnership, ours included. No unnecessary
+                    drama or complicated relationships. I'm here to simplify your experience.
+                </p>
+            </div>
+
+            <div class="box-item">
+                <img class="box-item_logo" id="svg-img" src="./assets/web-development-svgrepo-com.svg"
+                    alt="Web development">
+                <h2 class="box-title">Dedication</h2>
+                <p class="box-text">I'm fully dedicated to your project, bringing both expertise and a genuine passion
+                    for web development. Your success is my priority.Your project is in caring hands.
+                </p>
+            </div>
+    </section>
+    <section class="projects" id="projects">
+        <h2 class="title projects-title">Projects</h2>
+
+        <div class="projects-item">
+            <div class="projects-img">
+                <img class="projects-img_item" src="./assets/projects-garagem-63.png" alt="Image of the project">
+            </div>
+
+            <div class="projects-text">
+                <h2 class="title">Garagem 63</h2>
+                <p>
+                    Developed an online presence for a local car wash with a dynamic website. Our project showcased its
+                    premium services, emphasizing convenience through online appointment scheduling. Improved user
+                    experience by promoting a seamless and efficient way for customers to discover and interact with
+                    your services.
+                </p>
+                <a href="https://garagem-63.vercel.app/" class="projects-button" target="_blank">
+                    <img class="projects-img_enter" src="./assets/enter-login-svgrepo-com.svg" alt="Image enter">
+                    <p>Go to the website!</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-container" id="contact">
 
         <h2 class="title-contact">Send me a mensage!</h2>
-        <p >Got a question or proposal, or just want to say hello? Go ahead.</p> 
+        <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
 
+        <div class="social-media">
+            <ul class="social-media_list">
+                <li class="social-media_item"><a href="https://wa.me/+3530832090783/?" target="_blank"><img id="svg-img"
+                            src="./assets/whatsapp-svgrepo-com.svg" alt=""></a></li>
+                <li class="social-media_item"><a href="https://www.instagram.com/wesdevjr/" target="_blank"><img
+                            id="svg-img" src="./assets/instagram-svgrepo-com.svg" alt=""></a></li>
+                <li class="social-media_item"><a href="https://www.linkedin.com/in/wesley-junio-627211260/"
+                        target="_blank"><img id="svg-img" src="./assets/linkedin-svgrepo-com.svg" alt=""></a></li>
+                <li class="social-media_item"><a href="https://github.com/wesjx" target="_blank"><img id="svg-img"
+                            src="./assets/github-142-svgrepo-com.svg" alt=""></a></li>
+            </ul>
+        </div>
         <div class="contact">
 
-            <form       action="https://formsubmit.co/ajax/wesjrpirii@icloud.com"
-            method="POST"
-            data-form class="contact-form">
-              <div class="input">
-                  <input required="" autocomplete="off" type="text">
-                  <label for="name">Name</label>
-              </div>
-        
-              <div class="input">
-                  <input required="" autocomplete="off" name="email" type="text">
-                  <label for="email">E-mail</label>
-              </div>
-        
-              <div class="input">
-                  <textarea required="" cols="30" rows="3" id="message"></textarea>
-                  <label for="message">Message</label>
-              </div>
-              <button class="default-button" data-button>Send message →</button>
+            <form action="https://formsubmit.co/ajax/wesjrpirii@icloud.com" method="POST" data-form
+                class="contact-form">
+                <div class="input">
+                    <input required="" autocomplete="off" type="text">
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="input">
+                    <input required="" autocomplete="off" name="email" type="text">
+                    <label for="email">E-mail</label>
+                </div>
+
+                <div class="input">
+                    <textarea required="" cols="30" rows="3" id="message"></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button class="default-button" data-button>Send message →</button>
             </form>
         </div>
-        
-</section>
-<footer class="footer">
-    <ul class="media-social">
-        <li><a href="https://github.com/wesjx"><img src="./assets/icons8-github-48.png" href="" class="img-media-social"></a></li>
-        <li><a href="https://instagram.com/wesdevjr?igshid=YmM0MjE2YWMzOA=="><img src="./assets/icons8-instagram-48.png" class="img-media-social"></a></li>
-        <li><a href="https://www.linkedin.com/in/wesley-junio-627211260/"> <img src="./assets/icons8-linkedin-circundado-48.png"  class="img-media-social"></a></li>
-    </ul>
-    <p>&copy; Wesley junio - 2023</p>
-</footer>
+
+    </section>
+    <footer class="footer">
+        <ul class="media-social">
+            <li><a href="https://github.com/wesjx"><img src="./assets/icons8-github-48.png" id="svg-img" target="_blank"
+                        class="img-media-social"></a></li>
+            <li><a href="https://instagram.com/wesdevjr?igshid=YmM0MjE2YWMzOA=="><img
+                        src="./assets/icons8-instagram-48.png" class="img-media-social" id="svg-img"
+                        target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/in/wesley-junio-627211260/"> <img
+                        src="./assets/icons8-linkedin-circundado-48.png" class="img-media-social" id="svg-img"
+                        target="_blank"></a></li>
+        </ul>
+        <p>&copy; Wesley junio - 2023</p>
+    </footer>
+
 </body>
+
 </html>
